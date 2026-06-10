@@ -1,8 +1,8 @@
 layout: {zmk_keyboard: sofle}
 layers:
-  default: [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '&td_quote_dquote', '`', Q, W, E, R, T, Y, U, I, O, P, BSPC, TAB, A, S, D, F, G, H, J, K, L, ;,
-    '''', LSHFT, Z, X, C, V, B, MUTE, '', '&td_n_ntilde', M, '&td_comma_semi', '&td_dot_colon', '&td_minus_underscore', '&td_slash_bslash', LALT, LGUI, LCTRL, lower,
-    RET, SPACE, raise, RCTRL, RALT, RGUI]
+  default: [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '&td_quote_dquote', '`', Q, W, E, R, T, Y, U, I, O, P, BSPC, TAB, A, S, D, F, G, H, J, K, L, '[',
+    '&td_slash_bslash', LSHFT, Z, X, C, V, B, MUTE, '', '&td_n_ntilde', M, '&td_comma_semi', '&td_dot_colon', '&td_minus_underscore', RSHFT, LALT, LGUI, LCTRL, lower,
+    RET, SPACE, raise, RCTRL, RGUI, RALT]
   lower:
   - '&studio_unlock'
   - F1
@@ -17,18 +17,6 @@ layers:
   - F10
   - F11
   - '`'
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
-  - F12
-  - {t: ▽, type: trans}
   - '!'
   - '@'
   - '#'
@@ -36,34 +24,46 @@ layers:
   - '%'
   - ^
   - '&'
-  - KP MULTIPLY
+  - '*'
   - (
   - )
+  - BSPC
+  - {t: ▽, type: trans}
+  - '&td_exclam_open_exclam'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - '['
+  - ']'
   - '|'
   - {t: ▽, type: trans}
   - '='
+  - '&degree_macro'
+  - '~'
+  - '&td_question_open_question'
+  - +
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - '-'
-  - KP PLUS
+  - <
+  - '>'
   - '{'
   - '}'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '['
-  - ']'
-  - ;
-  - ':'
-  - \
-  - {t: ▽, type: trans}
+  - RSHFT
   - '&studio_unlock'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LGUI
+  - LCTRL
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - RET
+  - SPACE
+  - raise
+  - RCTRL
+  - RALT
+  - RALT
   raise:
   - BT CLR
   - {t: BT, h: '0'}
@@ -118,7 +118,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - lower
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}

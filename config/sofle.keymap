@@ -185,7 +185,7 @@
 &kp GRAVE       &kp EXCL                     &kp AT          &kp HASH  &kp DLLR                   &kp PRCNT                                &kp CARET  &kp AMPS  &kp ASTRK &kp LPAR   &kp RPAR  &kp BSPC
 &trans          &kp &td_exclam_open_exclam   &kp AT          &kp HASH  &kp DLLR                   &kp PRCNT                                &kp CARET  &kp AMPS  &kp ASTRK &kp LBKT   &kp RBKT  &kp PIPE
 &trans          &kp EQUAL                    &kp DEGREE      &kp TILDE &td_question_open_question &kp PLUS   &trans             &trans     &kp MINUS  &kp LT    &kp GT    &kp LBRC   &kp RBRC  &kp RSHFT
-                                             &studio_unlock  &kp LGUI  &kp LCTRL                  &trans     &kp RET            &kp SPACE  &mo RAISE  &kp RCTRL &kp RGUI  &kp RALT
+                                              &studio_unlock &kp LGUI  &kp LCTRL                  &trans     &kp RET            &kp SPACE  &mo RAISE  &kp RCTRL &kp RALT  &kp RALT
             >
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;

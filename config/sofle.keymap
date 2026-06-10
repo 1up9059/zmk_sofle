@@ -49,6 +49,45 @@
                 , <&macro_release &kp LSHFT>
                 ;
         };
+
+        question_open_macro: question_open_macro {
+            compatible = "zmk,behavior-macro";
+            label = "QUESTION_OPEN_MACRO";
+            #binding-cells = <0>;
+        
+            bindings
+                = <&macro_press &kp RALT>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp FSLH>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RALT>
+                ;
+        };
+
+        question_macro: question_macro {
+            compatible = "zmk,behavior-macro";
+            label = "QUESTION_MACRO";
+            #binding-cells = <0>;
+        
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp FSLH>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+
+        open_exclam_macro: open_exclam_macro {
+            compatible = "zmk,behavior-macro";
+            label = "OPEN_EXCLAM_MACRO";
+            #binding-cells = <0>;
+        
+            bindings
+                = <&macro_press &kp RALT>
+                , <&macro_tap &kp N1>
+                , <&macro_release &kp RALT>
+                ;
+        };
+
     };
 
     behaviors {
@@ -99,6 +138,26 @@
             tapping-term-ms = <200>;
             bindings = <&kp SQT>, <&double_quote_macro>;
         };
+
+        td_question_open_question: td_question_open_question {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_QUESTION_OPEN";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+        
+            bindings = <&question_macro>, <&question_open_macro>;
+        };
+
+        td_exclam_open_exclam: td_exclam_open_exclam {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_EXCLAM_OPEN_EXCLAM";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+        
+            bindings = <&kp EXCL>, <&open_exclam_macro>;
+        };
+
+
     };
 
     keymap {
@@ -110,9 +169,9 @@
             bindings = <
 &kp ESC    &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                              &kp N6        &kp N7     &kp N8          &kp N9          &kp N0                &td_quote_dquote
 &kp GRAVE  &kp Q   &kp W     &kp E     &kp R      &kp T                               &kp Y         &kp U      &kp I           &kp O           &kp P                 &kp BSPC
-&kp TAB    &kp A   &kp S     &kp D     &kp F      &kp G                               &kp H         &kp J      &kp K           &kp L           &kp SEMI              &kp SQT
-&kp LSHFT  &kp Z   &kp X     &kp C     &kp V      &kp B      &kp C_MUTE    &none      &td_n_ntilde  &kp M      &td_comma_semi  &td_dot_colon   &td_minus_underscore  &td_slash_bslash
-                   &kp LALT  &kp LGUI  &kp LCTRL  &mo LOWER  &kp RET       &kp SPACE  &mo RAISE     &kp RCTRL  &kp RALT        &kp RGUI
+&kp TAB    &kp A   &kp S     &kp D     &kp F      &kp G                               &kp H         &kp J      &kp K           &kp L           &kp LBKT              &td_slash_bslash
+&kp LSHFT  &kp Z   &kp X     &kp C     &kp V      &kp B      &kp C_MUTE    &none      &td_n_ntilde  &kp M      &td_comma_semi  &td_dot_colon   &td_minus_underscore  &kp RSHFT 
+                   &kp LALT  &kp LGUI  &kp LCTRL  &mo LOWER  &kp RET       &kp SPACE  &mo RAISE     &kp RCTRL  &kp RGUI        &kp RALT  
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -121,13 +180,13 @@
         lower_layer {
             label = "lower";
 
-            bindings = <
-&studio_unlock  &kp F1     &kp F2     &kp F3       &kp F4    &kp F5                       &kp F6     &kp F7    &kp F8           &kp F9     &kp F10   &kp F11
-&kp GRAVE       &kp N1     &kp N2     &kp N3       &kp N4    &kp N5                       &kp N6     &kp N7    &kp N8           &kp N9     &kp N0    &kp F12
-&trans          &kp EXCL   &kp AT     &kp HASH     &kp DLLR  &kp PRCNT                    &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR   &kp RPAR  &kp PIPE
-&trans          &kp EQUAL  &kp MINUS  &kp KP_PLUS  &kp LBRC  &kp RBRC   &trans    &trans  &kp LBKT   &kp RBKT  &kp SEMI         &kp COLON  &kp BSLH  &trans
-                           &studio_unlock  &trans  &trans    &trans     &trans    &trans  &trans     &trans    &trans           &trans
-            >;
+            bindings = < 
+&studio_unlock  &kp F1                       &kp F2          &kp F3    &kp F4                     &kp F5                                   &kp F6     &kp F7    &kp F8    &kp F9     &kp F10   &kp F11
+&kp GRAVE       &kp EXCL                     &kp AT          &kp HASH  &kp DLLR                   &kp PRCNT                                &kp CARET  &kp AMPS  &kp ASTRK &kp LPAR   &kp RPAR  &kp BSPC
+&trans          &kp &td_exclam_open_exclam   &kp AT          &kp HASH  &kp DLLR                   &kp PRCNT                                &kp CARET  &kp AMPS  &kp ASTRK &kp LBKT   &kp RBKT  &kp PIPE
+&trans          &kp EQUAL                    &kp DEGREE      &kp TILDE &td_question_open_question &kp PLUS   &trans             &trans     &kp MINUS  &kp LT    &kp GT    &kp LBRC   &kp RBRC  &kp RSHFT
+                                             &studio_unlock  &kp LGUI  &kp LCTRL                  &trans     &kp RET            &kp SPACE  &mo RAISE  &kp RCTRL &kp RGUI  &kp RALT
+            >
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
@@ -140,7 +199,7 @@
 &trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                          &kp PG_UP  &trans    &kp UP    &trans     &kp N0   &trans
 &trans      &kp LALT      &kp LCTRL     &kp LSHFT     &trans        &kp CLCK                        &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &kp BSPC
 &trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &trans     &trans    &trans    &trans     &trans   &trans
-                          &trans        &trans        &trans        &trans        &trans    &trans  &trans     &trans    &trans    &trans
+                          &trans        &trans        &trans        &mo LOWER     &trans    &trans  &trans     &trans    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;

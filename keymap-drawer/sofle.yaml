@@ -1,8 +1,8 @@
 layout: {zmk_keyboard: sofle}
 layers:
-  default: [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '&td_quote_dquote', '`', Q, W, E, R, T, Y, U, I, O, P, BSPC, TAB, A, S, D, F, G, H, J, K, L, '''',
-    RSHFT, LSHFT, Z, X, C, V, B, MUTE, '', '&td_n_ntilde', M, '&td_comma_semi', '&td_dot_colon', '&td_minund', '&td_slash_bslash', LALT, LGUI, LCTRL, lower, RET,
-    SPACE, raise, RCTRL, RGUI, RALT]
+  default: [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '&td_quote_dquote', '`', Q, W, E, R, T, Y, U, I, O, P, RSHFT, TAB, A, S, D, F, G, H, J, K, L, '''',
+    BSPC, LSHFT, Z, X, C, V, B, MUTE, '', '&td_n_ntilde', M, '&td_comma_semi', '&td_dot_colon', '&td_minund', '&td_slash_bslash', LALT, LGUI, LCTRL, lower, RET, SPACE,
+    raise, RCTRL, RGUI, RALT]
   lower:
   - ESC
   - F1
@@ -27,7 +27,7 @@ layers:
   - '8'
   - '9'
   - '0'
-  - BSPC
+  - RSHFT
   - TAB
   - '&td_eoe'
   - '@'
@@ -39,7 +39,7 @@ layers:
   - '*'
   - '['
   - ']'
-  - RSHFT
+  - BSPC
   - LSHFT
   - '='
   - '&dm'
@@ -71,56 +71,56 @@ layers:
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - INS
   - PSCRN
   - CMENU
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
   - PG UP
-  - {t: ▽, type: trans}
-  - UP
-  - {t: ▽, type: trans}
-  - '0'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - LALT
   - LCTRL
   - LSHFT
-  - {t: ▽, type: trans}
+  - ''
   - CLCK
   - PG DN
-  - LEFT
-  - DOWN
-  - RIGHT
+  - ''
+  - UP
+  - ''
   - DEL
   - BSPC
-  - {t: ▽, type: trans}
+  - ''
   - UNDO
   - CUT
   - COPY
   - PASTE
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - DEL
+  - ''
+  - ''
+  - ''
+  - LEFT
+  - DOWN
+  - RIGHT
+  - '&noe'
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - lower
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - RET
+  - '&trasns'
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

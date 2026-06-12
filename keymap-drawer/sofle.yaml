@@ -89,7 +89,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - TAB
   - LALT
   - LCTRL
   - LSHFT
@@ -101,7 +101,7 @@ layers:
   - ''
   - DEL
   - BSPC
-  - ''
+  - LSHFT
   - UNDO
   - CUT
   - COPY

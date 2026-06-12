@@ -26,7 +26,6 @@
     };
 
     macros {
-    macros {
         quote_macro: quote_macro {
             compatible = "zmk,behavior-macro";
             label = "QUOTE_MACRO";

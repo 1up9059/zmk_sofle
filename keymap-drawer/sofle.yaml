@@ -113,7 +113,7 @@ layers:
   - LEFT
   - DOWN
   - RIGHT
-  - '&noe'
+  - ''
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}

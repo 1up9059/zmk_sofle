@@ -46,7 +46,7 @@ layers:
   - '~'
   - '&td_qoq'
   - +
-  - MUT
+  - MUTE
   - {t: ▽, type: trans}
   - '-'
   - <

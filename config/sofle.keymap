@@ -232,7 +232,7 @@
 &kp ESC         &kp F1    &kp F2    &kp F3    &kp F4     &kp F5                                  &kp F6     &kp F7    &kp F8    &kp F9    &kp F11   &kp F12
 &kp GRAVE       &kp N1    &kp N2    &kp N3    &kp N4     &kp N5                                  &kp N6     &kp N7    &kp N8    &kp N9    &kp N0    &kp BSPC
 &kp TAB         &td_eoe   &kp AT    &kp HASH  &kp DLLR   &kp PRCNT                               &kp CARET  &kp AMPS  &kp ASTRK &kp LBKT  &kp RBKT  &kp RSHFT
-&kp LSHFT       &kp EQUAL &dm       &kp TILDE &td_qoq    &kp PLUS  &kp C_MUT          &trans     &kp MINUS  &kp LT    &kp GT    &kp LBRC  &kp RBRC  &kp PIPE
+&kp LSHFT       &kp EQUAL &dm       &kp TILDE &td_qoq    &kp PLUS  &kp C_MUTE         &trans     &kp MINUS  &kp LT    &kp GT    &kp LBRC  &kp RBRC  &kp PIPE
                           &kp LALT  &kp LGUI  &kp LCTRL  &trans    &kp RET            &kp SPACE  &mo RAISE  &kp RCTRL &kp RGUI  &kp RALT
             >;
 

@@ -1,10 +1,10 @@
 layout: {zmk_keyboard: sofle}
 layers:
   default: [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '&td_quote_dquote', '`', Q, W, E, R, T, Y, U, I, O, P, BSPC, TAB, A, S, D, F, G, H, J, K, L, '''',
-    '&td_slash_bslash', LSHFT, Z, X, C, V, B, MUTE, '', '&td_n_ntilde', M, '&td_comma_semi', '&td_dot_colon', '&td_minus_underscore', RSHFT, LALT, LGUI, LCTRL, lower,
+    RSHFT, LSHFT, Z, X, C, V, B, MUTE, '', '&td_n_ntilde', M, '&td_comma_semi', '&td_dot_colon', '&td_minus_underscore', '&td_slash_bslash', LALT, LGUI, LCTRL, lower,
     RET, SPACE, raise, RCTRL, RGUI, RALT]
   lower:
-  - '&studio_unlock'
+  - ESC
   - F1
   - F2
   - F3
@@ -14,22 +14,22 @@ layers:
   - F7
   - F8
   - F9
-  - F10
   - F11
+  - F12
   - '`'
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - ^
-  - '&'
-  - '*'
-  - (
-  - )
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
   - BSPC
-  - {t: ▽, type: trans}
-  - '&td_exclam_open_exclam'
+  - TAB
+  - '&td_eoe'
   - '@'
   - '#'
   - $
@@ -39,22 +39,22 @@ layers:
   - '*'
   - '['
   - ']'
-  - '|'
-  - {t: ▽, type: trans}
+  - RSHFT
+  - LSHFT
   - '='
-  - '&degree_macro'
+  - '&dm'
   - '~'
-  - '&td_question_open_question'
+  - '&td_qoq'
   - +
-  - {t: ▽, type: trans}
+  - MUT
   - {t: ▽, type: trans}
   - '-'
   - <
   - '>'
   - '{'
   - '}'
-  - RSHFT
-  - '&studio_unlock'
+  - '|'
+  - LALT
   - LGUI
   - LCTRL
   - {type: held}
@@ -62,7 +62,7 @@ layers:
   - SPACE
   - raise
   - RCTRL
-  - RALT
+  - RGUI
   - RALT
   raise:
   - BT CLR
@@ -150,7 +150,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - '&studio_unlock'
   - RGB BRD
   - RGB BRI
   - ''

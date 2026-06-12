@@ -26,17 +26,44 @@
     };
 
     macros {
+    macros {
+        quote_macro: quote_macro {
+            compatible = "zmk,behavior-macro";
+            label = "QUOTE_MACRO";
+            #binding-cells = <0>;
+
+            bindings
+                = <&macro_press &kp RALT>
+                , <&macro_tap &kp SQT>
+                , <&macro_release &kp RALT>
+                ;
+        };
+
         double_quote_macro: double_quote_macro {
             compatible = "zmk,behavior-macro";
             label = "DOUBLE_QUOTE_MACRO";
             #binding-cells = <0>;
 
             bindings
-                = <&macro_press &kp LSHFT>
+                = <&macro_press &kp RALT>
+                , <&macro_press &kp LSHFT>
                 , <&macro_tap &kp SQT>
                 , <&macro_release &kp LSHFT>
+                , <&macro_release &kp RALT>
                 ;
         };
+
+        //double_quote_macro: double_quote_macro {
+        //    compatible = "zmk,behavior-macro";
+        //    label = "DOUBLE_QUOTE_MACRO";
+        //    #binding-cells = <0>;
+
+        //    bindings
+        //        = <&macro_press &kp LSHFT>
+        //        , <&macro_tap &kp SQT>
+        //        , <&macro_release &kp LSHFT>
+        //        ;
+        //};
 
         underscore_macro: underscore_macro {
             compatible = "zmk,behavior-macro";
@@ -100,6 +127,7 @@
                 ;
         };
 
+
     };
 
     behaviors {
@@ -143,12 +171,21 @@
             bindings = <&kp MINUS>, <&underscore_macro>;
         };
 
+        //td_quote_dquote: td_quote_dquote {
+        //    compatible = "zmk,behavior-tap-dance";
+        //    label = "TD_QUOTE_DQUOTE";
+        //    #binding-cells = <0>;
+        //    tapping-term-ms = <200>;
+        //    bindings = <&kp SQT>, <&double_quote_macro>;
+        //};
+
         td_quote_dquote: td_quote_dquote {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_QUOTE_DQUOTE";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp SQT>, <&double_quote_macro>;
+              compatible = "zmk,behavior-tap-dance";
+              label = "TD_QUOTE_DQUOTE";
+              #binding-cells = <0>;
+              tapping-term-ms = <200>;
+
+            bindings = <&quote_macro>, <&double_quote_macro>;
         };
 
         td_question_open_question: td_question_open_question {

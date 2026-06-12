@@ -114,7 +114,7 @@
                 ;
         };
 
-        degree_macro: degree_macro {
+        degree_macro: dm{
             compatible = "zmk,behavior-macro";
             label = "DEGREE_MACRO";
             #binding-cells = <0>;
@@ -187,7 +187,7 @@
             bindings = <&quote_macro>, <&double_quote_macro>;
         };
 
-        td_question_open_question: td_question_open_question {
+        td_qoq: td_qoq {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_QUESTION_OPEN";
             #binding-cells = <0>;
@@ -196,9 +196,9 @@
             bindings = <&question_macro>, <&question_open_macro>;
         };
 
-        td_exclam_open_exclam: td_exclam_open_exclam {
+        td_eoe: td_eoe {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_EXCLAM_OPEN_EXCLAM";
+            label = "td_eoe";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
         
@@ -217,8 +217,8 @@
             bindings = <
 &kp ESC    &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                              &kp N6        &kp N7     &kp N8          &kp N9          &kp N0                &td_quote_dquote
 &kp GRAVE  &kp Q   &kp W     &kp E     &kp R      &kp T                               &kp Y         &kp U      &kp I           &kp O           &kp P                 &kp BSPC
-&kp TAB    &kp A   &kp S     &kp D     &kp F      &kp G                               &kp H         &kp J      &kp K           &kp L           &kp SQT             &td_slash_bslash
-&kp LSHFT  &kp Z   &kp X     &kp C     &kp V      &kp B      &kp C_MUTE    &none      &td_n_ntilde  &kp M      &td_comma_semi  &td_dot_colon   &td_minus_underscore  &kp RSHFT 
+&kp TAB    &kp A   &kp S     &kp D     &kp F      &kp G                               &kp H         &kp J      &kp K           &kp L           &kp SQT               &kp RSHFT
+&kp LSHFT  &kp Z   &kp X     &kp C     &kp V      &kp B      &kp C_MUTE    &none      &td_n_ntilde  &kp M      &td_comma_semi  &td_dot_colon   &td_minus_underscore  &td_slash_bslash 
                    &kp LALT  &kp LGUI  &kp LCTRL  &mo LOWER  &kp RET       &kp SPACE  &mo RAISE     &kp RCTRL  &kp RGUI        &kp RALT  
             >;
 
@@ -229,11 +229,11 @@
             label = "lower";
 
             bindings = < 
-&studio_unlock  &kp F1                       &kp F2          &kp F3    &kp F4                     &kp F5                                   &kp F6     &kp F7    &kp F8    &kp F9     &kp F10   &kp F11
-&kp GRAVE       &kp EXCL                     &kp AT          &kp HASH  &kp DLLR                   &kp PRCNT                                &kp CARET  &kp AMPS  &kp ASTRK &kp LPAR   &kp RPAR  &kp BSPC
-&trans          &td_exclam_open_exclam       &kp AT          &kp HASH  &kp DLLR                   &kp PRCNT                                &kp CARET  &kp AMPS  &kp ASTRK &kp LBKT   &kp RBKT  &kp PIPE
-&trans          &kp EQUAL                    &degree_macro   &kp TILDE &td_question_open_question &kp PLUS   &trans             &trans     &kp MINUS  &kp LT    &kp GT    &kp LBRC   &kp RBRC  &kp RSHFT
-                                             &studio_unlock  &kp LGUI  &kp LCTRL                  &trans     &kp RET            &kp SPACE  &mo RAISE  &kp RCTRL &kp RALT  &kp RALT
+&kp ESC         &kp F1    &kp F2    &kp F3    &kp F4     &kp F5                                  &kp F6     &kp F7    &kp F8    &kp F9    &kp F11   &kp F12
+&kp GRAVE       &kp N1    &kp N2    &kp N3    &kp N4     &kp N5                                  &kp N6     &kp N7    &kp N8    &kp N9    &kp N0    &kp BSPC
+&kp TAB         &td_eoe   &kp AT    &kp HASH  &kp DLLR   &kp PRCNT                               &kp CARET  &kp AMPS  &kp ASTRK &kp LBKT  &kp RBKT  &kp RSHFT
+&kp LSHFT       &kp EQUAL &dm       &kp TILDE &td_qoq    &kp PLUS  &kp C_MUT          &trans     &kp MINUS  &kp LT    &kp GT    &kp LBRC  &kp RBRC  &kp PIPE
+                          &kp LALT  &kp LGUI  &kp LCTRL  &trans    &kp RET            &kp SPACE  &mo RAISE  &kp RCTRL &kp RGUI  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -259,7 +259,7 @@
             bindings = <
 &bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                               &none  &none  &none  &none  &none  &none
 &ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF                            &none  &none  &none  &none  &none  &none
-&none              &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none                                      &none  &none  &none  &none  &none  &none
+&studio_unlock     &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none                                      &none  &none  &none  &none  &none  &none
 &none              &none            &none            &none            &none            &none            &rgb_ug RGB_TOG    &none  &none  &none  &none  &none  &none  &none
                                     &none            &none            &none            &none            &none              &none  &none  &none  &none  &none
             >;

@@ -114,7 +114,7 @@
                 ;
         };
 
-        degree_macro: dm{
+        dm: dm{
             compatible = "zmk,behavior-macro";
             label = "DEGREE_MACRO";
             #binding-cells = <0>;

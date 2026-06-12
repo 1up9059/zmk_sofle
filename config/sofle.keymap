@@ -162,7 +162,7 @@
             bindings = <&kp FSLH>, <&kp BSLH>;
         };
 
-        td_minus_underscore: td_minund{
+        td_minund: td_minund{
             compatible = "zmk,behavior-tap-dance";
             label = "TD_MINUS_UNDERSCORE";
             #binding-cells = <0>;

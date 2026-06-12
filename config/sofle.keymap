@@ -246,7 +246,7 @@
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &none      &none     &none     &none      &none    &none
 &none       &kp INS       &kp PSCRN     &kp K_CMENU   &none         &none                           &kp PG_UP  &none     &none     &none      &none    &none
 &none       &kp LALT      &kp LCTRL     &kp LSHFT     &none         &kp CLCK                        &kp PG_DN  &none     &kp UP    &none      &kp DEL  &kp BSPC
-&none       &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &kp DEL       &none     &none   &none      &kp LEFT  &kp DOWN  &kp RIGHT  &noe     &none
+&none       &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &kp DEL       &none     &none   &none      &kp LEFT  &kp DOWN  &kp RIGHT  &none    &none
                           &trans        &trans        &trans        &mo LOWER     &kp RET   &trasns &trans     &trans    &trans    &trans
             >;
 
